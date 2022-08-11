@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "911422714606",
+    "project_id": "guachatear",
+    "storage_bucket": "guachatear.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911422714606:android:95122ac2a4f423526039ff",
+        "android_client_info": {
+          "package_name": "com.jrblanco.guachatear"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911422714606-pab3sbvculesp2qm3fhmeki671d3iekf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7jMnv91R5YJSixd2Pqo3vAMXWt7toZSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911422714606-pab3sbvculesp2qm3fhmeki671d3iekf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
