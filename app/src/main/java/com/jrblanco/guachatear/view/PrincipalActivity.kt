@@ -19,6 +19,7 @@ class PrincipalActivity : AppCompatActivity() {
         binding = ActivityPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.bnview.itemIconTintList = null
         binding.bnview.selectedItemId = R.id.menu_chats  //Indicamos que al inicio se la opción "guaChat" la marcada
         cargarFragment(ChatsFragment()) //Fragment de los CHATS como inicio
 
@@ -32,17 +33,17 @@ class PrincipalActivity : AppCompatActivity() {
         binding.bnview.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.menu_contactos -> {    // Carga el fragment de los contactos
-                    title = "Contactos"
+                   // title = "Contactos"
                     cargarFragment(ContactosFragment())
                     true
                 }
                 R.id.menu_chats -> {        // Carga el fragment de los Chats
-                    title = "guaChats"
+                    //title = "guaChats"
                     cargarFragment(ChatsFragment())
                     true
                 }
                 R.id.menu_Ajustes -> {      // Carga el fragment de los ajustes
-                    title = "Ajustes"
+                   // title = "Ajustes"
 
                     cargarFragment(AjustesFragment())
                     true

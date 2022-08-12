@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/fondo"
-    tools:context=".view.LoginActivity"
-    android:id="@+id/framelayoutprincipal">
+    tools:context=".view.LoginActivity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/framelayoutprincipal"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
         app:itemBackground="@color/purple_500"
-        app:itemIconTint="@drawable/selector_bn"
         app:itemTextColor="@drawable/selector_bn"
-        app:menu="@menu/menu_bn" />
-</FrameLayout>
+        app:menu="@menu/menu_bn"/>
+
+</LinearLayout>

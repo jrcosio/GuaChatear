@@ -1,9 +1,11 @@
 package com.jrblanco.guachatear.model
 
-
+/**
+ * POJO para los usuarios
+ */
 data class UsuarioModel(
-    var nombre: String,
-    var email: String,
-    var photo: String,
-    var idGoogle: String
+    var idGoogle: String = "",
+    var nombre: String = "",
+    var usuario: String = "",
+    var photo: String = ""
 )

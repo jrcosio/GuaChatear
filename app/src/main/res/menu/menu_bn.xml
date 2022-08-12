@@ -4,13 +4,13 @@
     <item
         android:title="Contactos"
         android:id="@+id/menu_contactos"
-        android:icon="@drawable/ic_contacto"/>
+        android:icon="@drawable/selector_icon_contactos"/>
     <item
-        android:title="guaChats"
+        android:title="Chats"
         android:id="@+id/menu_chats"
-        android:icon="@drawable/ic_chat"/>
+        android:icon="@drawable/selector_icon_chat"/>
     <item
         android:title="Ajustes"
         android:id="@+id/menu_Ajustes"
-        android:icon="@drawable/ic_ajustes"/>
+        android:icon="@drawable/selector_icon_ajustes"/>
 </menu>
