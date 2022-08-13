@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/fondo">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/ivIconoChat"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
@@ -23,36 +23,36 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:fontFamily="monospace"
-        android:text="Nombre"
+        tools:text="Nombre"
         android:textColor="@color/teal_700"
         android:textSize="18sp"
         android:textStyle="normal|bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintStart_toEndOf="@+id/ivIconoChat"
+        app:layout_constraintTop_toTopOf="@+id/ivIconoChat" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtUltimoMnsj"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif"
-        android:text="TextView"
+        tools:text="Último mensaje"
         android:textColor="@color/teal_700"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/txtHoraUltiMnsj"
+        app:layout_constraintStart_toEndOf="@+id/ivIconoChat"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreChat" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtHoraUltiMnsj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="00:00"
+        tools:text="00:00"
         android:textColor="@color/teal_700"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="42dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/txtUltimoMnsj"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <View
         android:id="@+id/divider2"
@@ -62,6 +62,17 @@
         android:layout_marginTop="8dp"
         android:background="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintStart_toEndOf="@+id/ivIconoChat"
+        app:layout_constraintTop_toBottomOf="@+id/ivIconoChat" />
+
+    <ImageView
+        android:id="@+id/ivTipoChat"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNombreChat"
+        app:layout_constraintStart_toEndOf="@+id/txtNombreChat"
+        app:layout_constraintTop_toTopOf="@+id/txtNombreChat"
+        app:srcCompat="@drawable/ic_users_svgrepo_com" />
 </androidx.constraintlayout.widget.ConstraintLayout>

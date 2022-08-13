@@ -40,8 +40,6 @@
         tools:itemCount="8"
         tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/item_contactos"
-        tools:orientation="vertical"
-        tools:scrollbars="horizontal"
         tools:spanCount="2" />
 
     <EditText
@@ -49,9 +47,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:drawableRight="@drawable/ic_buscar"
+        android:drawableEnd="@drawable/ic_buscar"
         android:drawableTint="@color/teal_700"
         android:ems="10"
         android:hint="buscar por email"
@@ -59,7 +57,19 @@
         android:textColorHint="@color/teal_700"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/btnCrearContacto"
         app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/btnCrearContacto"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_add_user"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextEmailAddress" />/>
 </androidx.constraintlayout.widget.ConstraintLayout>
