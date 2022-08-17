@@ -19,6 +19,7 @@ class ChatsFragment : Fragment() {
         binding = FragmentChatsBinding.inflate(layoutInflater)
 
 
+
         initRecyclerView()
         return binding.root
     }
@@ -38,6 +39,8 @@ class ChatsFragment : Fragment() {
             ChatsModel("","","JOSERA","capullo","02:33",0),
             ChatsModel("","","PABLO","pringao","ayer",0),
             ChatsModel("","","FAMILIA","SANDRA: buuuuu","jue",1)
+
+
         )
     }
 }

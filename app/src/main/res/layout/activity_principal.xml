@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/fondo"
+    android:background="@color/primaryColor"
     tools:context=".view.LoginActivity">
 
     <FrameLayout
@@ -18,7 +18,7 @@
         android:id="@+id/bnview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemBackground="@color/purple_500"
+        app:itemBackground="@color/primaryDarkColor"
         app:itemTextColor="@drawable/selector_bn"
         app:menu="@menu/menu_bn"/>
 

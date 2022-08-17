@@ -103,6 +103,7 @@ class LoginActivity : AppCompatActivity() {
         if (user != null) {
             val principalIntent = Intent(applicationContext,PrincipalActivity::class.java)
             startActivity(principalIntent)
+
         }
     }
 }

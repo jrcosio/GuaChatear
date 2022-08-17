@@ -10,6 +10,7 @@ import com.google.firebase.ktx.Firebase
 import com.jrblanco.guachatear.R
 import com.jrblanco.guachatear.databinding.ItemContactosBinding
 import com.jrblanco.guachatear.model.UsuarioModel
+import java.util.*
 
 class ContactosAdapter(val listacontactos:List<UsuarioModel>): RecyclerView.Adapter<ContactosAdapter.ItemViewHolder>() {
 
@@ -32,7 +33,8 @@ class ContactosAdapter(val listacontactos:List<UsuarioModel>): RecyclerView.Adap
 
         fun render(usuarioModel: UsuarioModel){
             binding.apply {
-                txtNombreContactos.text = usuarioModel.nombre
+                txtNombreContactos.text = usuarioModel.nombre.lowercase()
+                    .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
                 txtEmailContactos.text = usuarioModel.usuario
                // Glide.with(ivAvatarContactos.context).load(usuarioModel.photo).into(ivAvatarContactos)
             }
