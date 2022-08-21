@@ -8,4 +8,11 @@ data class UsuarioModel(
     var nombre: String = "",
     var usuario: String = "",
     var photo: String = ""
-)
+){
+    companion object {
+        val USUARIOS = "usuarios"
+        val CONTACTOS = "contactos"
+    }
+}
+
+

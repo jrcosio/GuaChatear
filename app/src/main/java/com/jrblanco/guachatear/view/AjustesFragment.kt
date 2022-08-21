@@ -53,8 +53,6 @@ class AjustesFragment: Fragment() {
             }
         }
 
-
-
         return binding.root
     }
 }

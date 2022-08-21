@@ -1,10 +1,12 @@
 package com.jrblanco.guachatear.view
 
 import android.content.ContentValues
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -15,9 +17,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.jrblanco.guachatear.R
 import com.jrblanco.guachatear.databinding.ActivityLoginBinding
+import com.jrblanco.guachatear.model.UsuarioModel
 
 class LoginActivity : AppCompatActivity() {
 
@@ -67,7 +71,6 @@ class LoginActivity : AppCompatActivity() {
      * NOTA: es la versión actual del onActivityResult
      */
     private val googleLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-
         val task = GoogleSignIn.getSignedInAccountFromIntent(it.data)
         try {
             val account = task.getResult(ApiException::class.java)!!
@@ -88,7 +91,25 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
                     Log.d(ContentValues.TAG, "AuthConCredencial: OK")
-                    finish() //Fulmina la activity actual , la de login
+
+                    val db = Firebase.firestore
+
+                    val usuario:UsuarioModel = UsuarioModel(
+                        auth.currentUser?.uid.toString(),
+                        auth.currentUser?.displayName.toString(),
+                        auth.currentUser?.email.toString(),
+                        auth.currentUser?.photoUrl.toString()
+                    )
+
+                    db.collection(UsuarioModel.USUARIOS).document(usuario.idGoogle)
+                        .set(usuario)
+                        .addOnSuccessListener {
+                            Toast.makeText(this,"Bienvenid@ ${auth.currentUser?.displayName}",Toast.LENGTH_LONG).show()
+                        }
+                        .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
+
+
+                    finish() //Fulmina la activity actual -> la de login
                     showPrincipal(auth.currentUser)
                 } else {
                     Log.d(ContentValues.TAG, "AuthConCredencial: ERROR")

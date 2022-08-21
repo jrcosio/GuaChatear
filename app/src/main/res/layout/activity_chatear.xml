@@ -22,7 +22,9 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="0"
-            app:srcCompat="@drawable/ic_atras" />
+            app:srcCompat="@drawable/ic_atras"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
 
         <TextView
             android:id="@+id/txtNombreChatear"
@@ -49,7 +51,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        tools:listitem="@layout/item_conversacion_1" />
+        android:background="@drawable/ic_fondoguachat"
+
+        android:backgroundTint="#585B67"
+        tools:listitem="@layout/item_conversacion_2" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,7 +69,9 @@
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
-            app:srcCompat="@drawable/ic_add_picture" />
+            app:srcCompat="@drawable/ic_add_picture"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
 
         <EditText
             android:id="@+id/etxtMensaje"
@@ -83,9 +90,13 @@
 
         <ImageView
             android:id="@+id/btnEnviar"
-            android:layout_width="30dp"
+            android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
-            app:srcCompat="@drawable/ic_enviar" />
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:background="@drawable/boton_enviar"
+            android:paddingVertical="5dp"
+            app:srcCompat="@drawable/ic_enviar"/>
     </LinearLayout>
 </LinearLayout>
