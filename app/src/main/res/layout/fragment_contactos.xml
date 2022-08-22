@@ -42,19 +42,13 @@
         tools:listitem="@layout/item_contactos"
         tools:spanCount="2" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
+    <SearchView
+        android:id="@+id/etBuscarContacto"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:drawableEnd="@drawable/ic_buscar"
-        android:drawableTint="@color/teal_700"
-        android:ems="10"
-        android:hint="buscar"
-        android:inputType="textEmailAddress"
-        android:textColorHint="@color/teal_700"
+        android:background="@drawable/round_buscar"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toStartOf="@+id/btnAddContacto"
@@ -69,7 +63,7 @@
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
         android:src="@drawable/ic_add_user"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/etBuscarContacto"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextEmailAddress" />/>
+        app:layout_constraintTop_toTopOf="@+id/etBuscarContacto" />/>
 </androidx.constraintlayout.widget.ConstraintLayout>

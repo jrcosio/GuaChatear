@@ -11,8 +11,11 @@ import com.jrblanco.guachatear.R
 import com.jrblanco.guachatear.databinding.ItemContactosBinding
 import com.jrblanco.guachatear.model.UsuarioModel
 import java.util.*
+import kotlin.collections.ArrayList
 
-class ContactosAdapter(val listacontactos:List<UsuarioModel>): RecyclerView.Adapter<ContactosAdapter.ItemViewHolder>() {
+class ContactosAdapter(var listacontactos:ArrayList<UsuarioModel>): RecyclerView.Adapter<ContactosAdapter.ItemViewHolder>() {
+
+    private var listaOriginal = listacontactos
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -26,6 +29,18 @@ class ContactosAdapter(val listacontactos:List<UsuarioModel>): RecyclerView.Adap
     override fun getItemCount(): Int {
         return listacontactos.size
     }
+
+//    fun filtro(txtBuscar:String) {
+//        if (txtBuscar.isEmpty()) {
+//            this.listacontactos.clear()
+//            this.listacontactos.addAll(listaOriginal)
+//        } else {
+//            val listatemporal = listacontactos.filter{it.nombre.lowercase().contains(txtBuscar.lowercase())}
+//            listacontactos.clear()
+//            listacontactos.addAll(listatemporal)
+//        }
+//        notifyDataSetChanged()
+//    }
 
     class ItemViewHolder(val view: View):RecyclerView.ViewHolder(view) {
 

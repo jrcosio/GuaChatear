@@ -49,7 +49,6 @@ class ChatsFragment : Fragment() {
             .addOnSuccessListener { result ->
                 for (document in result) {
                     println(document.data)
-                    //if (!document.data["idGoogle"].toString().equals(mAuth.currentUser?.uid)) {
                     this.listaChats.add(
                         ChatsModel(
                             document.data["icono"] as String,
@@ -66,17 +65,4 @@ class ChatsFragment : Fragment() {
                 Log.d(ContentValues.TAG, "Error getting documents: ", exception)
             }
     }
-
-//    companion object {
-//        val listaChats = listOf<ChatsModel>(
-//            ChatsModel("","","SANDRA","chao","00:43",0),
-//            ChatsModel("","","MOMIAS","Jairo: jajajaj","10:00",1),
-//            ChatsModel("","","KOTLIN/JAVA","jrblanco: http://www.google.com","mar",1),
-//            ChatsModel("","","JOSERA","capullo","02:33",0),
-//            ChatsModel("","","PABLO","pringao","ayer",0),
-//            ChatsModel("","","FAMILIA","SANDRA: buuuuu","jue",1)
-//
-//
-//        )
-//    }
 }
