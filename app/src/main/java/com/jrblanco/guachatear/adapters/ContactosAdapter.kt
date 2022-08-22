@@ -35,8 +35,8 @@ class ContactosAdapter(val listacontactos:List<UsuarioModel>): RecyclerView.Adap
             binding.apply {
                 txtNombreContactos.text = usuarioModel.nombre.lowercase()
                     .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
-                txtEmailContactos.text = usuarioModel.usuario
-               // Glide.with(ivAvatarContactos.context).load(usuarioModel.photo).into(ivAvatarContactos)
+                txtEmailContactos.text = usuarioModel.usuario.substringBefore("@")
+                Glide.with(ivAvatarContactos.context).load(usuarioModel.photo).into(ivAvatarContactos)
             }
 
             //============= Listener de los eventos ==============

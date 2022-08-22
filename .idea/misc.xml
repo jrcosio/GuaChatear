@@ -42,7 +42,7 @@
         <entry key="app/src/main/res/layout/fragment_anadir_contacto.xml" value="0.2653846153846154" />
         <entry key="app/src/main/res/layout/fragment_chats.xml" value="0.2042763157894737" />
         <entry key="app/src/main/res/layout/fragment_contactos.xml" value="0.2620253164556962" />
-        <entry key="app/src/main/res/layout/item_anadir_contacto.xml" value="0.26452991452991453" />
+        <entry key="app/src/main/res/layout/item_anadir_contacto.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_chats.xml" value="0.2042763157894737" />
         <entry key="app/src/main/res/layout/item_contactos.xml" value="0.2042763157894737" />
         <entry key="app/src/main/res/layout/item_conversacion_1.xml" value="0.24351851851851852" />

@@ -34,9 +34,9 @@ class ChatsAdapter(val listaChats:List<ChatsModel>): RecyclerView.Adapter<ChatsA
             binding.apply {
                 txtNombreChat.text = chatsModel.nombre.lowercase()
                     .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
-                txtUltimoMnsj.text = chatsModel.ultimotexto
-                txtHoraUltiMnsj.text = chatsModel.date
-                if (chatsModel.tipoChat == 1) { ivTipoChat.visibility = View.VISIBLE }
+                txtUltimoMnsj.text = chatsModel.ultimomensaje
+                txtHoraUltiMnsj.text = chatsModel.diahora
+                if (chatsModel.tipoChat.equals("Grupo")) { ivTipoChat.visibility = View.VISIBLE }
             }
 
             //================ EVENTOS ================
