@@ -21,6 +21,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.jrblanco.guachatear.R
 import com.jrblanco.guachatear.databinding.ActivityLoginBinding
+import com.jrblanco.guachatear.model.ChatsModel
 import com.jrblanco.guachatear.model.UsuarioModel
 
 class LoginActivity : AppCompatActivity() {
@@ -101,13 +102,20 @@ class LoginActivity : AppCompatActivity() {
                         auth.currentUser?.photoUrl.toString()
                     )
 
+
                     db.collection(UsuarioModel.USUARIOS).document(usuario.idGoogle)
                         .set(usuario)
                         .addOnSuccessListener {
+                            // -- Todos los nuevos usuarios son añadidos al grupo por defecto del reto
+                            val grupoDefauls = mapOf("tipo" to "Grupo")
+
+                            db.collection(UsuarioModel.USUARIOS).document(usuario.idGoogle).collection("mischat").document("myJBwknUiOLj1QbKXmgd")
+                                .set(grupoDefauls)
+                                .addOnSuccessListener { Log.d(TAG,"Grupo por defecto añadido") }
+                                .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
                             Toast.makeText(this,"Bienvenid@ ${auth.currentUser?.displayName}",Toast.LENGTH_LONG).show()
                         }
                         .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
-
 
                     finish() //Fulmina la activity actual -> la de login
                     showPrincipal(auth.currentUser)

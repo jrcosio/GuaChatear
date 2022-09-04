@@ -35,7 +35,7 @@
         <entry key="app/src/main/res/drawable/selector_icon_ajustes.xml" value="0.325" />
         <entry key="app/src/main/res/drawable/selector_icon_chat.xml" value="0.325" />
         <entry key="app/src/main/res/drawable/selector_icon_contactos.xml" value="0.325" />
-        <entry key="app/src/main/res/layout/activity_chatear.xml" value="0.29907407407407405" />
+        <entry key="app/src/main/res/layout/activity_chatear.xml" value="0.18547008547008548" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30833333333333335" />
         <entry key="app/src/main/res/layout/activity_principal.xml" value="0.1567622950819672" />

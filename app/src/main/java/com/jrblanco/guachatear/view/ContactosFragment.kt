@@ -108,9 +108,6 @@ class ContactosFragment : Fragment(), SearchView.OnQueryTextListener {
                 adapter.notifyDataSetChanged()
             }
         }
-
         return false
     }
-
-
 }

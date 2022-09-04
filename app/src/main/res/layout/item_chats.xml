@@ -42,6 +42,8 @@
         tools:text="Último mensaje"
         android:textColor="@color/primaryDarkColor"
         android:textSize="14sp"
+        android:ellipsize="end"
+        android:lines="1"
         app:layout_constraintEnd_toStartOf="@+id/txtHoraUltiMnsj"
         app:layout_constraintStart_toEndOf="@+id/ivIconoChat"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreChat" />
@@ -51,10 +53,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        tools:text="00:00"
-        android:textColor="@color/primaryLightColor"
+        android:textColor="@color/gris"
         app:layout_constraintBottom_toBottomOf="@+id/txtUltimoMnsj"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="00:00" />
 
     <View
         android:id="@+id/divider2"
